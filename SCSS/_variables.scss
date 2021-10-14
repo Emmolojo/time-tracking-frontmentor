@@ -1,0 +1,77 @@
+$lorange: hsl(15, 100%, 70%);
+$sblue: hsl(195, 74%, 62%);
+$lred: hsl(348, 100%, 68%);
+$Lgreen: hsl(145, 58%, 55%);
+$violet: hsl(264, 64%, 52%);
+$sorange: hsl(43, 84%, 65%);
+$desblue: hsl(235, 45%, 64%);
+$blue: hsl(246, 80%, 60%);
+$vdblue: hsl(226, 43%, 10%);
+$dblue:hsl(235, 46%, 20%);
+$ftsmall:1.3rem;
+$smallphone:368px;
+$tablet:568px;
+$desktop:786px;
+$wide:1200px;
+$ultra-wide:1616px;
+@mixin smallphone {
+    @media screen and (min-width: $smallphone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin wide {
+    @media screen and (min-width: $wide) {
+        @content;
+    }
+}
+
+@mixin ultrawide {
+    @media screen and (min-width: $ultra-wide) {
+        @content;
+    }
+}
+
+body {
+    background-color: $vdblue;
+    color: #dfdede;
+    @include wide {
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+h2 {
+    font-size: $ftsmall;
+    font-weight: 300;
+}
+
+span {
+    font-size: 0.8rem;
+}
+
+img {
+    width: 60px;
+    border: 3px solid #fff;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    @include wide {
+        width: 70px;
+        margin-bottom: 20px;
+    }
+}
